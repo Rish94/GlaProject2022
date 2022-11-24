@@ -22,7 +22,7 @@ export default function luxury() {
                         <span id="carprize">Rs 8.99 - 11.98 Lakh (Avg Ex-Showroom price)</span><br></br>
                         <span id="spes">Petrol , 20.04 to 20.65 kmpl , Manual/Automatic</span>
                         <br></br><br></br>
-                        <a href="" id="goforbooking">Go For Booking</a>
+                        <a href="/bookappoint" id="goforbooking">Go For Booking</a>
                     </div>
                 </div>
                 <div id="carsecmaruti">
@@ -36,7 +36,7 @@ export default function luxury() {
                         <span id="carprize">Rs 11.29 - 14.55 Lakh (Avg Ex-Showroom price)</span><br></br>
                         <span id="spes">Petrol/CNG , 20.27 to 20.97 kmpl , Manual/Automatic</span>
                         <br></br><br></br>
-                        <a href="" id="goforbooking">Go For Booking</a>
+                        <a href="/bookappoint" id="goforbooking">Go For Booking</a>
                     </div>
                 </div>
                 <div id="carsecmaruti">
@@ -50,7 +50,7 @@ export default function luxury() {
                         <span id="carprize">Rs 10.45 - 19.65 Lakh (Avg Ex-Showroom price)</span><br></br>
                         <span id="spes">Petrol , 19.38 to 27.97 kmpl , Manual/Automatic</span>
                         <br></br><br></br>
-                        <a href="" id="goforbooking">Go For Booking</a>
+                        <a href="/bookappoint" id="goforbooking">Go For Booking</a>
                     </div>
                 </div>
                 <div id="carsecmaruti">
@@ -64,7 +64,7 @@ export default function luxury() {
                         <span id="carprize">Rs 7.99 - 13.96 Lakh (Avg Ex-Showroom price)</span><br></br>
                         <span id="spes">Petrol , 19.8 to 20.15 kmpl , Manual/Automatic</span><br></br>
                         <br></br>
-                        <a href="" id="goforbooking">Go For Booking</a>
+                        <a href="/bookappoint" id="goforbooking">Go For Booking</a>
                     </div>
                 </div>
             </div>

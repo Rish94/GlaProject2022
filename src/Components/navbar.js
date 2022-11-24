@@ -17,10 +17,10 @@ export default function Navbar() {
                         <a href="/about" id="content">About</a>
                         <a href="/services" id="content">Services</a>
                         <a href="/contact" id="content">Contact</a>
-                        <a href="/contact" id="content">Reviews</a>
+                        <a href="https://forms.gle/ZumXHXg4zXYZk4Tx6" id="content">Reviews</a>
                     </div>
                     <div id="content">
-                        <FaUserAlt/>
+                        <a href='/login' id='content'><FaUserAlt/></a>
                     </div>
                 </div>
         </>

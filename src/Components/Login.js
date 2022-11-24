@@ -1,25 +1,19 @@
 import React, { useState } from "react";
-
-import "../CSS/signin.css"
-import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import {auth} from "../firebase"
-import { useNavigate } from "react-router-dom"
-
-const SignIn=()=>{
+import '../CSS/signin.css';
+import {auth} from '../firebase';
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+const LogIn=()=>{
 
     const navigate = useNavigate();
 
     const[fullName,setFullName] = useState({
-        fname : "",
-        lname : "",
         email : "",
         password : "",
     });
 
     const inputEvent=(event)=>{
-        
-      const{name, value} = event.target;
-        
+        const{name, value} = event.target;
         setFullName((preValue) =>{
             return{
                 ...preValue,
@@ -30,18 +24,16 @@ const SignIn=()=>{
 
     const onSubmits=(event)=>{
         event.preventDefault();
-        if(!fullName.fname || !fullName.lname || !fullName.email || !fullName.password){
+        if(!fullName.email || !fullName.password){
             alert("Please enter all values!")
         }
         else{
             console.log(fullName);
-            createUserWithEmailAndPassword(auth, fullName.email, fullName.password)
+            signInWithEmailAndPassword(auth, fullName.email, fullName.password)
                 .then(async(res)=>{
                     const user = res.user;
                     console.log(user);
-                    alert("Profile created")
-                    //console.log(res);
-
+                    alert("Login Successful")
                     navigate("/")
                 })
                 .catch((err)=> {
@@ -50,7 +42,6 @@ const SignIn=()=>{
                 });
         }
     };
-
     return(
         <>
         <div className="fullPage">
@@ -58,22 +49,7 @@ const SignIn=()=>{
         <div className="headS">
             <form onSubmit={onSubmits}>
             <div className="formBox">   
-            <h1 className="heading">Register {fullName.fname} {fullName.lname}</h1>
-            <input 
-            type="text" 
-            placeholder=" fName " 
-            name="fname"
-            onChange={inputEvent} 
-            value={fullName.fname} 
-            className="box"/>
-
-            <input 
-            type="text" 
-            placeholder=" lName " 
-            name="lname"
-            onChange={inputEvent} 
-            value={fullName.lname} 
-            className="box"/>
+            <h1 className="heading">Enter Credentials</h1>
 
             <input 
             type="email" 
@@ -82,15 +58,13 @@ const SignIn=()=>{
             onChange={inputEvent} 
             value={fullName.email} 
             className="box"/>
-
-            
             <input 
             type="password" 
             placeholder=" Password " 
             name="password"
             onChange={inputEvent} 
             value={fullName.password} 
-            className="box"/>       
+            className="box"/> 
             <div className ="submitBox">
             <button type="submit" className="submitButton">Submit</button>
             </div>
@@ -98,10 +72,15 @@ const SignIn=()=>{
             </form>
         </div>
         <img src = "https://img.freepik.com/free-vector/sign-page-abstract-concept-illustration_335657-2242.jpg?w=2000" className="img1" alt="image2"/>
+
+        <p className="common-para">
+              Don't have an account? <a href="/signup">Signup</a>
+            </p>
+       
         </div>
         </div>
         </>
     );
 }
 
-export default SignIn;
+export default LogIn;

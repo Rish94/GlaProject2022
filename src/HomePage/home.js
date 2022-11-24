@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from '../Components/navbar';
 import '../CSS/home.css';
-import { BrowserRouter as Router, Route, Link, Switch }
+import { BrowserRouter as Router, Route,Routes ,Link , Switch}
   from "react-router-dom";
 import ABOUT from '../Components/about'
 
@@ -21,28 +21,35 @@ import Muv from "../Components/muv";
 import Luxury from "../Components/luxury";
 import Serviceform from "../Components/serviceform"
 
+import Appointform from "../Components/bookappoint"
+
+import Login from '../Components/Login'
+import Signup from '../Components/signup'
+
 
 
 export default function home() {
   return (
     <>
       <Navbar />
-       <Router>
-        <Switch>
-        <Route exact path='/' component={Home} />
-          <Route exact path='/about' component={ABOUT} />
-          <Route exact path='/contact' component={CONTACT} />
-          <Route exact path='/services' component={SERVICES} />
+      <Router>
+        <Routes>
+        <Route  path='/'element={<Home/>} />
+          <Route  path='/about'element={<ABOUT/>} />
+          <Route  path='/contact'element={<CONTACT />} />
+          <Route  path='/services'element={<SERVICES/>} />
+          <Route  path='/hatchback'element={<Hatchback/>} />
+          <Route  path='/sedan'element={<Sedan />} />
+          <Route  path='/suv'element={<Suv/>} />
+          <Route  path='/muv'element={<Muv />} />
+          <Route  path='/luxury'element={<Luxury />} />
+          <Route  path='/knowmore'element={<Knowmore/>} />
+          <Route  path='/serform'element={<Serviceform />} />
+          <Route  path='/bookappoint'element={<Appointform />} />
 
-          <Route exact path='/hatchback' component={Hatchback} />
-          <Route exact path='/sedan' component={Sedan} />
-          <Route exact path='/suv' component={Suv} />
-          <Route exact path='/muv' component={Muv} />
-          <Route exact path='/luxury' component={Luxury} />
-          <Route exact path='/knowmore' component={Knowmore} />
-          <Route exact path='/serform' component={Serviceform} />
-
-        </Switch>
+          <Route  path='/login'element={<Login />} />
+          <Route  path='/signup'element={<Signup/>} />
+        </Routes>
       </Router>
       <Footer/>
     </>

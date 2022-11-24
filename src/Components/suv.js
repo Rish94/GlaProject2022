@@ -19,7 +19,7 @@ export default function suv() {
                         <span id="carprize">Rs 10.45 - 19.65 Lakh (Avg Ex-Showroom price)</span><br></br>
                         <span id="spes">Petrol , 19.38 to 27.97 kmpl , Manual/Automatic</span>
                         <br></br><br></br>
-                        <a href="" id="goforbooking">Go For Booking</a>
+                        <a href="/bookappoint" id="goforbooking">Go For Booking</a>
                         </div>
                     </div>
                     <div id="carsecmaruti">
@@ -33,7 +33,7 @@ export default function suv() {
                         <span id="carprize">Rs 7.99 - 13.96 Lakh (Avg Ex-Showroom price)</span><br></br>
                         <span id="spes">Petrol , 19.8 to 20.15 kmpl , Manual/Automatic</span><br></br>
                         <br></br>
-                        <a href="" id="goforbooking">Go For Booking</a>
+                        <a href="/bookappoint" id="goforbooking">Go For Booking</a>
                         </div>
                     </div>
 

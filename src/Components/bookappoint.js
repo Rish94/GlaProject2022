@@ -8,11 +8,10 @@ import axios from 'axios';
 const startNum = 1000;
 var NextNum = startNum;
 
-
-export default function Serviceform() {
+ const BookAppoint=()=> {
     const navigate= useNavigate();
     const[fullName,setFullName] = useState({
-        carmodel : "",
+        username : "",
         service : "",
     });
     const inputEvent=(event)=>{
@@ -28,7 +27,7 @@ export default function Serviceform() {
         event.preventDefault();
         
         const userData = {
-            carmodel : fullName.carmodel,
+            username : fullName.username,
             service : fullName.service
         };
        if(!userData.carmodel && !userData.service)
@@ -42,30 +41,31 @@ export default function Serviceform() {
         }).catch((err)=>{
             var data = "";
             NextNum = NextNum + 1;
-            data = userData.carmodel+ NextNum + userData.service;
+            data = userData.username+ NextNum + userData.service;
             alert("Your appointment is booked. Your appointment number is " + data);
             console.log(err);
         }
         );}
     };
 
-    return (
-        <>
-        <hr></hr>
+  return (
+    
+    <>
+    <hr></hr>
             <div class="Wr">
-                            <marquee behavior="" direction=""><h2>Online appointment for Car Service</h2></marquee>
+                            <marquee behavior="" direction=""><h2>Book Appointment for Showroom visit!!</h2></marquee>
                         </div>
             <div class="MAIN">
                 <div id="form">
                     <form onSubmit={notify}>
                         <div class="form-group">
-                            <label id="writetext" for="Car Model">Car Model</label>
-                            <input type="text" className="form-control" id="Car Model"name='carmodel' placeholder="Enter Car Model" onChange={inputEvent} value={fullName.carmodel} />
+                            <label id="writetext" for="Car Model">Customer Name</label>
+                            <input type="text" className="form-control" id="Car Model" placeholder="Enter Name" name='username' onChange={inputEvent} value={fullName.username}/>
                         </div>
                         <div class="form-group">
-                            <label id="writetext" for="service">Service</label>
-                            <select name="service" id="service" className="form-control"  onChange={inputEvent} value={fullName.service} defaultValue={fullName.service}>
-                                <option value="">Select Service</option>
+                            <label id="writetext" for="service">Car Model</label>
+                            <select name="service" id="service" className="form-control" onChange={inputEvent} value={fullName.service} defaultValue={fullName.service}>
+                                <option value="">Select Model</option>
                                 <option value="oil-change">Oil Change</option>
                                 <option value="tire-replacement">Tire Replacement</option>
                                 <option value="battery-replacement">Battery Replacement</option>
@@ -82,21 +82,12 @@ export default function Serviceform() {
                             <label id="writetext" for="time">Time</label>
                             <input type="time" name="time" id="time" className="form-control" />
                         </div>
-
-                        <div class="form-group">
-                            <label id="writetext" for="name">Name</label>
-                            <input type="text" name="name" id="name" className="form-control" />
-                        </div>
-                        <div class="form-group">
-                            <label id="writetext" for="email">Email</label>
-                            <input type="email" name="email" id="email" className="form-control" />
-                        </div>
                         <div class="form-group">
                             <label id="writetext" for="phone">Phone</label>
                             <input type="tel" name="phone" id="phone" className="form-control" />
                         </div>
                         <div class="form-group-button">
-                            <button type="submit"  className="btn btn-primary">Book Appointment</button>
+                            <button type="submit" className="btn btn-primary">Book Appointment</button>
                         </div>
                     </form>
 
@@ -107,12 +98,7 @@ export default function Serviceform() {
 
             </div>
             <hr></hr>
-            
-
-        </>
-    );
-    
-    
+    </>
+  );
 }
-
-
+export default BookAppoint;

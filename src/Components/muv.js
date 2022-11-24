@@ -22,7 +22,7 @@ export default function muv() {
                         <span id="carprize">Rs 8.32 - 12.79 Lakh (Avg Ex-Showroom price)</span><br></br>
                         <span id="spes">Petrol/CNG , 20.3 to 26.15 kmpl , Manual/Automatic</span>
                         <br></br><br></br>
-                        <a href="" id="goforbooking">Go For Booking</a>
+                        <a href="/bookappoint" id="goforbooking">Go For Booking</a>
                         </div>
                     </div>
                     <div id="carsecmaruti">
@@ -36,7 +36,7 @@ export default function muv() {
                         <span id="carprize">Rs 11.29 - 14.55 Lakh (Avg Ex-Showroom price)</span><br></br>
                         <span id="spes">Petrol/CNG , 20.27 to 20.97 kmpl , Manual/Automatic</span>
                         <br></br><br></br>
-                        <a href="" id="goforbooking">Go For Booking</a>
+                        <a href="/bookappoint" id="goforbooking">Go For Booking</a>
                         </div>
                     </div>
                     <div id="carsecmaruti">
@@ -50,7 +50,7 @@ export default function muv() {
                         <span id="carprize">Rs 4.63 - 5.94 Lakh (Avg Ex-Showroom price)</span><br></br>
                         <span id="spes">Petrol/CNG , 16.11 to 20.88 kmpl , Manual/Automatic</span>
                         <br></br><br></br>
-                        <a href="" id="goforbooking">Go For Booking</a>
+                        <a href="/bookappoint" id="goforbooking">Go For Booking</a>
                         </div>
                     </div>
                 </div>

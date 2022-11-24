@@ -12,6 +12,9 @@ body{
     padding-bottom: 10px;
    
 }
+a{
+    text-decoration: none;
+}
 #logo{
     width: 150px;
     height: 52px;
